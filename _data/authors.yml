@@ -1,0 +1,25 @@
+# authors
+
+arkadianriver:
+  name: Gary Faircloth
+  bio: >
+    Interests: tech writing, programming, science, history.
+    You might also find me playing some PC Ga&mdash;SQUIRREL!
+    Also, I adapted this web theme for GitHub Pages.
+  disqus_shortname: arkadianriver
+  url: http://arkadianriver.com
+  email: gfair@arkadianriver.com
+  avatar: gar.png
+
+  Otto:
+    name: Otto Schlatter
+    bio: >
+      I research possible solutions for ideas and look for people who can help.
+    email: otto@octobur.watch
+    avatar: otto.jpg
+
+  Nash:
+    name: Nash Patrick
+    bio: I help Otto and take care of the business side of things.
+    email: nash@octobur.watch
+    avatar: troll.gif

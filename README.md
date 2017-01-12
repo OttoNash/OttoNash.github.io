@@ -1,70 +1,48 @@
-# OttoNash.github.io
-The Website!
+## arkadianriver.com
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Based on a Jekyll port of the Spectral theme by HTML5 UP.
-Find the original non-jekyll theme at: http://html5up.net/
-Made for Jekyll by @arkadianriver
+My personal web site, based off the http://html5up.net/spectral design by
+[@ajlkn](http://twitter.com/ajlkn).
+The site is made for blog and portfolio content. The blog can contain both
+personal entries and entries by syndicated authors.
+The site uses jekyll, a method of creating and maintaining a web site,
+which works by using local templates to generate static files that you upload
+and sync with your remote site.
+This repo is the same code I use for my site, excluding my posts.
 
-Note: @arkadianriver is in no way associated with @n33co
-      other than I really like his _style_! get it?
+### If you clone or fork this repo to use it:
 
-Note: @OttoNash is in no way associated with @arkadianriver
-      or @n33c0 other than we loved their website theme.
+0. Install [Jekyll](https://jekyllrb.com/) (version 3.1.2 or higher).
 
-Below is @n33co's readme from the original pure HTML theme
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0. Tweak the site to make it your own. Jekyll uses [YAML files](http://www.yaml.org/start.html)
+   for its site variables:
 
+   a. Edit the `_config.yml` file, replacing the values for each key with your info.
 
-Spectral by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+   b. Add a `_data/tokens.yml` file with your IDs & mail program.
+      See the `_data/tokens-template.yml.` file for example entries.
 
+   c. Add author info for yourself in `_data/authors.yml` as the first
+      author entry in the file.
 
-A big, modern, blocky affair with a mobile-style menu, fully responsive styling,
-and an assortment of pre-styled elements. So, pretty much what you were expecting
--- except, of course, for how it's put together, specifically:
+   d. Provide your own images.
+   
+   e. Continue tweaking to your heart's desire, or not.
 
-- It's built on Skel 3*, a leaner, more modular rewrite of my responsive framework.
+0. Create your posts:
 
-  (* = still in development as of this writing)
+   a. Use the posts in the 31st century as guides for yours. They're built by jekyll only when
+      the `--future` option is used.
 
-- It uses flexbox*, which eliminates all kinds of terrible hacks and clunky layout
-  stopgaps (like CSS grid systems).
+   b. You can run `ruby compose.rb` to create new draft posts.
 
-  (* = not supported on IE8/9, but non-flexbox fallbacks are included)
+0. Test and publish your site:
 
-- It uses Sass* a lot more intelligently, thanks in part to several new mixins
-  and functions I've been working on (as well as a few by @HugoGiraudel).
+   If you're building your site on Windows (like me) and you use WinSCP to sync with your
+   remote site, you can use the `site.bat` file. Set up a `_site.env` file
+   as described in the comments of `site.bat` and change the excludes list for your site.
 
-  (* = still entirely optional if you prefer vanilla CSS :)
-
-- A ton of other stuff.
-
-In short, Spectral's the culmination of several new things I'm working on/trying out,
-so please, let me know what you think :)
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-n33.co @n33co dribbble.com/n33
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		background-size polyfill (github.com/louisremi)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
+   `site dev` runs `jekyll serve --future --drafts` in development mode.  
+   `site devnof` runs `jekyll serve --drafts` in development mode.  
+   `site preview` runs `jekyll serve` in production mode.  
+   `site prod` simply builds with `jekyll build` in production mode (no serve).  
+   `site publish` uses WinSCP's `synchronize` feature to mirror to a remote site.
