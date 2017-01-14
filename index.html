@@ -170,43 +170,26 @@
 <section class="wrapper style4">
     <div class="inner">
       <section>
-  <form id="sendemail" method="post" action="">
-    <input type="hidden" value="dog" id="type1" />
-    <input type="hidden" value="cow" id="type2" />
-    <input type="hidden" value="cat" id="type3" />
-    <h4>Note: this may not be functioning right now. <a href="mailto:info@octobur.watch">Click here to email us.</a></h4>
-	<div class="row uniform">
-      <div class="6u 12u$(xsmall)">
-        <input type="text" name="name" id="name" value="" placeholder="Name" />
-      </div>
-      <div class="6u$ 12u$(xsmall)">
-        <input required type="email" name="email" id="email" value="" placeholder="Email" />
-      </div>
-      <div class="12u$">
-        <input required type="text" minlength="2" name="subject" id="subject" value="" placeholder="Subject" />
-      </div>
-      <div class="12u$">
-        <textarea required name="textbody" id="textbody" placeholder="Enter your message" rows="6"></textarea>
-      </div>
-      <div class="12u$">
-        <input type="text" name="country" id="country" value=""
-        placeholder="What animal is this emoji? =^.^=" />
-      </div>
-      <div class="12u$">
-        <ul class="actions">
-          <li><input type="submit" value="Send Message" class="special" /></li>
-        </ul>
-      </div>
-    </div>
-    <input type="hidden" name="success"
-           value="http://localhost:4000/contact-success" />
-    <input type="hidden" name="failure"
-           value="http://localhost:4000/contact-failure" />
-  </form>
+      <form action="https://formspree.io/info@octobur.watch" method="POST">
+      <input type="hidden" name="_cc" value="otto@octobur.watch" />
+      <input type="hidden" name="_next" value="/contact-success" />
+    	<div class="row uniform">
+	      <div class="6u 12u$(xsmall)">
+			<input type="text" name="name" placeholder="Name"> </div>
+          <div class="6u$ 12u$(xsmall)">
+			<input type="email" name="_replyto" placeholder="Email"> </div>
+	      <div class="12u$">
+	      	<input type="text" name="_subject" placeholder="Subject"> </div>
+	      <div class="12u$">
+        	<textarea required name="_message" id="textbody" placeholder="Enter your message" rows="6"></textarea> </div>
+		  <div class="12u$">
+        	<ul class="actions">
+         	 <li><input type="submit" value="Send Message" class="special" /></li>
+        	</ul>
+      	  </div>
+      	</form>
 </section>
 
-    </div>
-  </section>
 
   <!-- CTA -->
 					<section id="cta" class="wrapper style4">
