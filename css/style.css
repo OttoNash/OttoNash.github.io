@@ -1,4 +1,4 @@
-body{
+body, .blur{
   background-image: url('../img/banner.jpg');
   height: 100vh;
   background-size: cover;
@@ -89,7 +89,7 @@ header nav ul li a{
   width: 90%;
   height: 300px;
 }
-
+/*
 .columns{
   display: flex;
   column-count: 2;
@@ -104,7 +104,7 @@ header nav ul li a{
   flex-shrink: 1;
   width: 50%;
 }
-
+*/
 .tag{
   position: absolute;
   margin: auto;
@@ -135,15 +135,85 @@ border-radius: 2px;
 user-select: none;
 cursor: pointer;
 transition: .5s ease;
+text-decoration: none;
 }
-.btn-large{
+.btn-left{
+  float: left;
+}
+.btn-right{
+  float: right;
+}
+#main-btn{
   position: relative;
   padding: 18px 5%;
   margin: 125px 25% 125px 5%;
   float: right;
 }
+.post-text button{
+  position: absolute;
+  margin: 10%;
+}
 .btn:hover{
   background: white;
   color: black;
   transform: scale(1.1);
+}
+
+#watch{
+  margin: 10%;
+  position: relative;
+//  display: block;
+}
+.blur{
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.post{
+  z-index: 2;
+  position: absolute;
+  background: rgba(34, 34, 34, 0.75);
+  padding: 20%;
+
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: 0px;
+
+/*  color: white;
+  font-family: 'Ubuntu',sans-serif;
+  letter-spacing: 2px; */
+}
+
+.post-text{
+  z-index: 3;
+  position: relative;
+
+  color: white;
+  font-family: 'Ubuntu',sans-serif;
+  letter-spacing: 2px;
+}
+.post-text h1{
+  padding-top: 10%;
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.post-text p{
+  padding-top: 15px;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  padding-right: 10%;
+}
+.post-text hr{
+  width: 80%;
+  align: center;
 }
